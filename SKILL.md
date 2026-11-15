@@ -19,7 +19,27 @@ Who it is for: an editor or agent making GTA VI news Shorts who wants a repeatab
 
 ## Proof
 
-Three Shorts were built with this method on November 15, 2026, on the Joker Gaming channel, and all three were scheduled the same day. No views, earnings, or subscriber counts are claimed here, because none were verified for this skill.
+Three Shorts were built with this method on November 15, 2026, on the Joker Gaming channel, and all three were scheduled the same day.
+
+View counts below were read from the public YouTube pages on 15 November 2026 (evening PKT). They rise as videos gain views; re-check the live pages for current numbers. No earnings are claimed anywhere in this skill.
+
+### Trending Shorts on the channel
+
+| Short | Published | Views (15 Nov 2026) | Likes |
+|---|---|---|---|
+| SPOTTED: Jason's GTA 6 Launch Trailer Shirt Names a Base From the 1997 Game - https://youtube.com/shorts/8uBbUEWNCag | 10 Nov 2026 | 1,140 | 7 |
+| NEW: How Big Is GTA VI's Map? Rockstar Already Answered It - https://youtube.com/shorts/C4Sr6Emcxiw | 10 Nov 2026 | 1,028 | 9 |
+| NEW: GTA VI's Weapon Wheel Is Back — But You Can't Carry Everything - https://youtube.com/shorts/DP4sJFn5ql4 | 10 Nov 2026 | 1,010 | 8 |
+| PlayStation AND Xbox Agree: GTA 6 Broke Both Records - https://youtube.com/shorts/aoM0939hZ7s | 12 Nov 2026 | 874 | 5 |
+| Your 13-Year-Old Xbox Plays GTA VI on Launch Day - https://youtube.com/shorts/_RcbKgTRgTA | 12 Nov 2026 | 804 | 12 |
+
+Across the 37 most recent Shorts on @jokergaminglive, total public views were 10,013 on the same check. Subscriber count (~8,165) is owner-supplied and was not verified from the platform for this skill. Watch hours are not public on YouTube; they come from YouTube Studio only, so no watch-hours figure is claimed here.
+
+Screenshots of the top 3 view counts (15 Nov 2026):
+
+![SPOTTED: Jason's GTA 6 Launch Trailer Shirt — 1,140 views](proof/top1-jason-shirt.png)
+![NEW: How Big Is GTA VI's Map? — 1,028 views](proof/top2-map-size.png)
+![NEW: GTA VI's Weapon Wheel Is Back — 1,010 views](proof/top3-weapon-wheel.png)
 
 | Video | Slot (PKT, Nov 15) | Duration | Red-team verdict |
 |---|---|---|---|
