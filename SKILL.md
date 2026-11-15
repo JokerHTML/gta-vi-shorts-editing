@@ -1,7 +1,7 @@
 ---
 name: gta-vi-shorts-editing
 description: >-
-  Build English GTA VI news Shorts (30-59s) the Joker Gaming way: ChatGPT scripts from a fact ledger, Kokoro voiceover, exact word-timed subtitles, official stills and trailer motion, designed fact cards, loudness and colour gates, and an independent red-team gate before upload. Use when planning, scripting, editing, checking, or uploading a GTA VI Short.
+  Build English GTA 6 (GTA VI) news Shorts (30-59s) the Joker Gaming way with this Claude Code skill: ChatGPT scripts from a fact ledger, Kokoro voiceover, exact word-timed subtitles, official stills and trailer motion, designed fact cards, loudness and colour gates, and an independent red-team gate before upload. Use when planning, scripting, editing, checking, or uploading a GTA 6 Short.
 license: MIT
 metadata:
   version: 1.0.0
