@@ -35,12 +35,6 @@ View counts below were read from the public YouTube pages on 15 November 2026 (e
 
 Across the 37 most recent Shorts on @jokergaminglive, total public views were 10,013 on the same check. Subscriber count (~8,165) is owner-supplied and was not verified from the platform for this skill. Watch hours are not public on YouTube; they come from YouTube Studio only, so no watch-hours figure is claimed here.
 
-Screenshots of the top 3 view counts (15 Nov 2026):
-
-![SPOTTED: Jason's GTA 6 Launch Trailer Shirt — 1,140 views](proof/top1-jason-shirt.png)
-![NEW: How Big Is GTA VI's Map? — 1,028 views](proof/top2-map-size.png)
-![NEW: GTA VI's Weapon Wheel Is Back — 1,010 views](proof/top3-weapon-wheel.png)
-
 | Video | Slot (PKT, Nov 15) | Duration | Red-team verdict |
 |---|---|---|---|
 | GTA VI Built a Whole Cartoon Inside the Game - https://youtube.com/shorts/OC5KczRGYSQ | 17:00 | 40.00s | 96/100 + 60/60 PASS, 0 criticals |
