@@ -2,7 +2,7 @@
 
 - **Video:** https://youtube.com/shorts/74I0MXC-aIQ
 - **Slot:** Sunday, November 15, 2026, 21:00 PKT
-- **Duration:** 40.8s (1224 frames at 30fps, 1080x1920). A parent verification line says "40.99s"; that differs from 1224f / 30fps = 40.80s and is unexplained in the sources. Re-measure the delivered file rather than picking one.
+- **Duration:** 40.99s (ffprobe format duration of the delivered file, re-measured Nov 16, 2026; video stream 1224 frames = 40.80s, the 0.19s difference is the audio tail). The parent line 40.99s was correct: 40.8s is the video-stream frame count, not the delivered-file duration.
 - **Scores:** 97/100 + 57/60 PASS (release bar at least 90/100 plus at least 48/60 plus zero criticals). Zero criticals, zero majors, 3 minors. Provenance: the score is recorded in `v3-burger-shot/RUN-NOTES.md` ("Red-team QA (independent, 2026-11-15 about 23:52 PKT)") ONLY. There is NO standalone red-team report file for V3 on disk; `v3-burger-shot/work/` contains no red-team report. State that provenance whenever you cite this score.
 - **Title:** 50 characters, verbatim: "Burger Shot Is Real Now. You Can Eat It in Florida"
 - **Delivered file:** `final-burger-shot.mp4` (43,728,077 B, sha256 `9b813a7c2005478c74e39b702a99223af84a16812045f5509db1ed4a12e1dfeb` per parent verification)
@@ -15,7 +15,7 @@ ChatGPT conversation: https://chatgpt.com/c/6af8b616-8078-83ea-ad17-6a2cbe644589
 
 ## Description (verbatim)
 
-> Burger Shot is real now. And you can actually eat there. IGN reports Miami smash-burger chain Skinny Louie is transforming its Florida stores into Burger Shot from November thirteenth through December thirty-first, complete with Burger Shot signage, uniforms, packaging, and a GTA-themed menu. IGN reports the menu includes The Bleeder Triple, a Burger Shot single, a Burger Shot double, and a caramel milkshake. Nine Florida locations, per Skinny Louie: Wynwood, Little Havana, Coral Gables, South Miami, Aventura, Dania Beach, Lauderdale by the Sea, West Palm Beach, and the Kaseya Center stand. Burger Shot and Cluckin' Bell stands have operated inside Miami's Kaseya Center since October twenty-first, as shown in photos from the Heat's home opener. Reported arena prices: a cheeseburger combo costs twenty-eight dollars fifty before tax, while an applewood bacon burger combo costs thirty-one dollars. These are arena prices, not standalone-store menu prices. On Wednesday, November eighteenth, the Miami Heat face the Milwaukee Bucks for "A Night in Vice City." Tip-off is seven p.m. Eastern on ESPN, with Burger Shot and Cluckin' Bell food available inside the arena. Rockstar has posted nothing about this Burger Shot promotion on its own channels. Sources: IGN (Nov 13, 2026); Miami Heat — A Night in Vice City (official page); GameSpot — arena prices; Skinny Louie (via IGN). Four days to launch.
+> Burger Shot is real now. And you can actually eat there. IGN reports Miami smash-burger chain Skinny Louie is transforming its Florida stores into Burger Shot from November thirteenth through December thirty-first, complete with Burger Shot signage, uniforms, packaging, and a GTA-themed menu. IGN reports the menu includes The Bleeder Triple, a Burger Shot single, a Burger Shot double, and a caramel milkshake. Nine Florida locations, per Skinny Louie: Wynwood, Little Havana, Coral Gables, South Miami, Aventura, Dania Beach, Lauderdale by the Sea, West Palm Beach, and the Kaseya Center stand. Burger Shot and Cluckin' Bell stands have operated inside Miami's Kaseya Center since October twenty-first, as shown in photos from the Heat's home opener. Reported arena prices: a cheeseburger combo costs twenty-eight dollars fifty before tax, while an applewood bacon burger combo costs thirty-one dollars. These are arena prices, not standalone-store menu prices. On Wednesday, November eighteenth, the Miami Heat face the Milwaukee Bucks for "A Night in Vice City." Tip-off is seven p.m. Eastern on ESPN, with Burger Shot and Cluckin' Bell food available inside the arena. Rockstar has posted nothing about this Burger Shot promotion on its own channels. Sources: IGN (Nov 13, 2026); Miami Heat — A Night in Vice City (official page, no publication date — accessed Nov 13, 2026); GameSpot (Nov 13, 2026) — arena prices; Skinny Louie (via IGN, Nov 13, 2026). Four days to launch.
 
 ## Tags (12, exact brief order)
 
@@ -93,3 +93,12 @@ Loudness: single-pass I=-15.5 landed -17.47 (stereo render already clipping at T
 - **M28:** no card sits over the LIQUOR BAR neon on LC_03. Read every card on its frame, not just in the design file.
 - **M36:** the Remotion raw carried sRGB transfer; bare output-level colour flags did not stick. Only `setparams` inside the filter chain fixed the tags, verified on the delivered file.
 - **M25:** the stereo render added about +3 dB to the mono mix and clipped at TP +0.18 before loudnorm. Loudness is measured on the delivered file, and the fix took three passes to land in band (-15.21 / -1.16). Account for the mono-to-stereo shift in every loudnorm pass.
+
+
+## Run-code legend (F44)
+
+Shot-plan codes: two-letter set prefix + frame number (VC = Vice City, LC =
+Lucia close-up, LK = Leonida Keys, JD = Jason/driving set — prefixes as recorded
+in the run folder's POOL-GATE-RECORD; the set-prefix key lives there, not in this
+file). `w2` = second window of the same still. BLOCKED = the run's content-safety
+blocklist (M23): Boobie_Ike_01 was never used because it is BLOCKED.

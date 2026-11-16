@@ -63,7 +63,7 @@ Delivered ebur128 I -15.9 LUFS, loudnorm input_i -15.91, input_tp -1.72 dBTP (in
 ## Red-team minors (3, -4 total, no fix required)
 
 1. -2: GR05 hero-backup used as a beat (contingency spent; VC08/GR02 reserves unused)
-2. -1: M34 card line 2 drops "ABOUT" ("THIRTY-SECOND TEASER" reads exact; the brief's own M13 spec wrote it that way, so the fix belongs in the brief, not a rebuild)
+2. -1: M34 card line 2 drops "ABOUT" ("THIRTY-SECOND TEASER" reads exact; the brief's own card spec wrote it that way (the brief mislabelled the card spec "M13"; see SKILL.md Step 8), so the fix belongs in the brief, not a rebuild)
 3. -1: M22 stem 6 has no visual change at its start (card static f766-840, 74f / 2.47s, while a new fact is spoken)
 
 Judged deviations, no deduction: three about 3s holds (push-ins measured real: mean diffs 13.97/60f, 34.19/30f, 9.31/60f); caption P9 wraps "about-thirty-" / "second" at the hyphen, acceptable.
@@ -75,3 +75,47 @@ Judged deviations, no deduction: three about 3s holds (push-ins measured real: m
 - **M22:** a staged card's final reveal must coincide with the last fact it anchors. Stem 6's 74f static tail, with a new fact spoken and no visual change, cost a point.
 - **M20/M23:** the beach motion span ends at 57.0, not 57.1, because the frame at 57.1 is already the blocked shirtless gym man. Full-res, full-span sampling decides span edges, never a tile.
 - **M25:** the delivered file's colour transfer was sRGB, not bt709, even though the build report claimed "bt709x4". The claim was wrong on one field; the fix was a lossless remux, verified by framemd5. Measure the delivered file, never trust the report.
+
+## Fact ledger (complete — 12 rows)
+
+Reconstructed v1.2.0 from the Nov 15 run records (script, description, brief FACTS
+§1–§10, and the red-team report's ledger citations). Every viewer-facing word in V1
+traces to one of these rows (M17).
+
+| # | Fact (in words, never digits) | Source (outlet, date) | Label | Verification note |
+|---|---|---|---|---|
+| F1 | GTA VI launches Thursday, November nineteenth, on PlayStation Five and Xbox Series X and S. | Rockstar Newswire, Nov 6, 2025 | CONFIRMED | Launch date and platforms stated directly on the Newswire page. |
+| F2 | Macca & Friends is an animated series that plays inside GTA VI. | DiscussingFilm exclusive, Nov 13, 2026 | CONFIRMED | Teaser debuted by DiscussingFilm; Rockstar reshared it the same day. |
+| F3 | DiscussingFilm exclusively debuted a teaser of about thirty seconds on Friday, November thirteenth. | DiscussingFilm, Nov 13, 2026 | CONFIRMED | Exclusive debut stated in the DiscussingFilm post. |
+| F4 | The official blurb: "The series follows the adventures of Macca the Gator and his wetland friends across the state of Leonida. Coming November 19 on WEAZEL." | Rockstar / DiscussingFilm blurb, Nov 13, 2026 | CONFIRMED | Quoted verbatim; digits in the blurb are the official wording, not a script violation. |
+| F5 | Rockstar reshared the teaser on its own accounts a few hours after the debut, and posted no standalone Newswire article about it. | Rockstar Games accounts, Nov 13, 2026 | CONFIRMED | Reshare observed on Rockstar's accounts; no Newswire article found (checked at rockstargames.com/newswire). |
+| F6 | The crab landlord's name: outlets disagree (Pinche vs Pinchy); Rockstar names no one. | DiscussingFilm / Gematsu / Beebom, Nov 13, 2026 | REPORTED - DISPUTED | Same fact reported two ways by two outlets = one row, DISPUTED; the script never names the disputed value. |
+| F7 | WEAZEL is the fictional TV network inside GTA; the series premieres on WEAZEL on November nineteenth, launch day. | Official blurb (F4) | CONFIRMED | Premiere date and network from the blurb itself. |
+| F8 | Macca was already the face of the three-hundred-ninety-nine-dollar Collector's Box and the Goodtime State merch collection. | Rockstar store listing, Nov 2026 | CONFIRMED | Price and merch tie-in from the seller page (the store listing), not only the brand page (M32). |
+| F9 | Press and fans compared the teaser's look to Adult Swim shows. | Gematsu / Beebom, Nov 13, 2026 | REACTION | Labelled as fans' comparison, never as fact. |
+| F10 | Episode count, episode length, and whether full episodes are watchable start to finish are unannounced; nobody outside Rockstar has said. | Checked at Rockstar Newswire + store listing, Nov 13, 2026 | CONFIRMED AS UNANNOUNCED | Negative claim checked at the places it would be published (M32), not only at the brand page. |
+| F11 | The crew includes a manatee, a pink flamingo and a talking sun; scenes include an airboat ride and a lowrider cruise; Macca owes rent to his crab landlord and swings a baseball bat. | Teaser frames, via DiscussingFilm, Nov 13, 2026 | CONFIRMED | Read from the teaser frames themselves, not from a description of them. |
+| F12 | Four days remain from Sunday, November fifteenth to the November nineteenth launch. | Calendar arithmetic, verified with `date -d` | CONFIRMED | Nov 19 minus Nov 15 = 4; re-derived at scheduling (M30). |
+
+## Banned list (complete — 10 rows)
+
+| # | Banned in this video | Say instead |
+|---|---|---|
+| B1 | Naming the crab landlord definitively (Pinche vs Pinchy). | "his crab landlord" only. |
+| B2 | Claiming full episodes are watchable, or any episode count / length. | "Nobody outside Rockstar has said how many episodes, how long they run, or whether full episodes are watchable." |
+| B3 | The word "leak" or any leak handle. | Nothing: the story is an official teaser, so the word never appears. |
+| B4 | Saying "Rockstar announced" about the show. | "Rockstar reshared the teaser." |
+| B5 | Saying "yesterday" for November thirteenth (that was Friday). | "Friday, November thirteenth." |
+| B6 | Saying "tomorrow" for the launch. | "November nineteenth" / "[N] days to launch." |
+| B7 | Any product link. | Nothing: no product links anywhere. |
+| B8 | Digits for any number in the script (dates, counts, times, money). | Words only ("thirty seconds", "three hundred ninety-nine dollars"). |
+| B9 | Carrying the "four days" countdown past its air date (M30). | Re-derive from the ACTUAL air date at scheduling; a mismatch is a fix1 rebuild. |
+| B10 | Stating the Adult Swim comparison as fact. | "Fans compared the look to Adult Swim." |
+
+## Run-code legend (F44)
+
+Shot-plan codes: two-letter set prefix + frame number. GR = Grassrivers set
+(Grassrivers_03 hero, GR03 w2 = the second window of the GR03 still, bed dimmed
+0.32); VC = Vice City set (VC08, GR02 are reserves); `w2` = second window of the
+same still. BLOCKED = the run's content-safety blocklist (M23): a BLOCKED frame is
+never usable in any video of the run.

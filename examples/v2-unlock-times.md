@@ -2,7 +2,7 @@
 
 - **Video:** https://youtube.com/shorts/aF6RgIg_mHI
 - **Slot:** Sunday, November 15, 2026, 19:00 PKT
-- **Duration:** 45.9s (1377 frames at 30fps, 1080x1920). A parent verification line says "46.0s"; that is rounding, and 45.9s is the ffprobe and red-team value.
+- **Duration:** 46.00s (ffprobe format duration of the delivered file, re-measured Nov 16, 2026; video stream 1377 frames = 45.90s, the 0.10s difference is the audio tail).
 - **Scores:** 90/100 + 53/60 is the PRE-FIX verdict and a FAIL. MAJOR-1 (colour / pixel-format) blocked release even though the numeric bars were met. The shipped file is the MAJOR-fixed file, technically re-verified (loudness re-measured -15.62 / -1.87, luma shift at or below 0.1, fixed f1000 viewed identical). Expected post-fix score approx 94/100. That is an expectation, NOT a measured re-score. Never present 90/53 as the shipped score, and never present 94 as measured. Source: `v2-unlock-times/work/red-team-report.md`, about 02:00 PKT, and `RUN-NOTES.md`.
 - **Title:** 55 characters, verbatim: "New Zealand Plays GTA VI First. Here's Your Unlock Time"
 
@@ -14,7 +14,7 @@ ChatGPT follow-up 2, 2026-11-15 00:35 PKT. The original first return was 115 wor
 
 ## Description (verbatim)
 
-> There is no single GTA VI launch moment — your country has its own midnight. Rockstar Support confirms GTA VI unlocks at midnight local time on November nineteenth in every region, on both consoles. The store listings show New Zealand unlocks first at midnight NZDT on Thursday, November nineteenth — eleven a.m. UTC on Wednesday, November eighteenth. Mexico and Central America unlock last at six a.m. UTC on Thursday, November nineteenth, about nineteen hours after New Zealand. The store listings show the United States unlocks at midnight Eastern, which is nine p.m. Pacific on Wednesday, November eighteenth, because the stores keep one time per country. Pre-loading does not unlock the game early. Pre-loaded files stay locked until your region's unlock time. Your unlock follows your store account region, not where you are. Rockstar has not announced one single global unlock hour. The per-country times come from store listings and can change. Sources: Rockstar Support — regional pre-load and release times; PlayStation Blog — rolling midnight launch; PlayStation and Xbox store listings (Nov 14, 2026). Four days to launch.
+> There is no single GTA VI launch moment — your country has its own midnight. Rockstar Support confirms GTA VI unlocks at midnight local time on November nineteenth in every region, on both consoles. The store listings show New Zealand unlocks first at midnight NZDT on Thursday, November nineteenth — eleven a.m. UTC on Wednesday, November eighteenth. Mexico and Central America unlock last at six a.m. UTC on Thursday, November nineteenth, about nineteen hours after New Zealand. The store listings show the United States unlocks at midnight Eastern, which is nine p.m. Pacific on Wednesday, November eighteenth, because the stores keep one time per country. Pre-loading does not unlock the game early. Pre-loaded files stay locked until your region's unlock time. Your unlock follows your store account region, not where you are. Rockstar has not announced one single global unlock hour. The per-country times come from store listings and can change. Sources: Rockstar Support (Nov 14, 2026) — regional pre-load and release times; PlayStation Blog (Nov 14, 2026) — rolling midnight launch; PlayStation and Xbox store listings (Nov 14, 2026). Four days to launch.
 
 ## Tags (12, verbatim order)
 
@@ -37,12 +37,12 @@ ChatGPT follow-up 2, 2026-11-15 00:35 PKT. The original first return was 115 wor
 |---|---|
 | Segments | 20: 16 still windows (max 68f) plus 1 motion span plus 4 cards |
 | Motion span | Launch Trailer 12.0-14.1 (63f, phone call; head/mid/tail viewed full-res, one continuous take, active rows 120..2039; crop 1080x1920 @1700:120) |
-| Cards | C1 "MIDNIGHT LOCAL TIME" (78f, navy/cyan); C2a "NEW ZEALAND FIRST" (191f, green/teal, row 2 staggers in at card frame about 81 with the spoken "eleven a.m. UTC"); C2b "MEXICO LAST" (146f, plum/amber, "ABOUT NINETEEN HOURS LATER" at headline size, M34); C3 "FOUR DAYS TO LAUNCH." (79f). Cards are 36% of the video |
+| Cards | C1 "MIDNIGHT LOCAL TIME" (78f, navy/cyan); C2a "NEW ZEALAND FIRST" (191f, green/teal, row 2 staggers in at card frame about 81 with the spoken "eleven a.m. UTC"); C2b "MEXICO LAST" (146f, plum/amber, "ABOUT NINETEEN HOURS LATER" at headline size, M34); C3 "FOUR DAYS TO LAUNCH." (79f). Cards are 36% of the video (494f of 1377f — V2's own share; V3's card share is ~24%, 293f of 1224f) |
 | Captions | 20 phrases, 88px Anton plus gradient rail, bottom 150 (A/B recipe); no captions during card windows |
 | VO | 9 stems, 41.61s speech, 102 words; concat 44.41s = 1332f; 8 gaps of 0.35s |
 | Hero | Vice_City_11 (true dusk/night skyline; suggested window x=1312; also the thumbnail base) |
 | Mix | VO-only (see minors: MINOR-1). No tail chime |
-| Grade | Grade chain NOT executed (v3-as-executed also skipped it) |
+| Grade | Grade chain NOT executed — a deviation: V2 shipped ungraded, and the deviation is recorded here rather than hidden. (The earlier parenthetical claiming v3 also skipped it was wrong: V3's file documents the full chain executed.) |
 | Credit | "Footage: Rockstar Games" present at f000/f100 |
 
 ## Thumbnail
@@ -63,7 +63,7 @@ The delivered file was yuvj420p / pc (full) / bt470bg / transfer plus primaries 
 
 ## Red-team minors (6, no change)
 
-1. MINOR-1: silent gaps plus 1.3s silent tail under C3 (accepted by design: 0.35s gaps are the A/B stem recipe; end hold is standard end-card read time). Note: the VO-only mix was still docked here under M4.
+1. MINOR-1: silent gaps plus 1.5s silent tail under C3 (video stream 1377f minus concat 1332f = 45f = 1.5s; the earlier 1.3s figure was wrong). Accepted by design: 0.35s gaps are the A/B stem recipe; end hold is standard end-card read time. Note: the VO-only mix was still docked here under M4.
 2. MINOR-2: cards open on black field about 4 frames (v3 precedent, spring-stagger entry)
 3. MINOR-3: VO s04 "nineteen hours later" without "about" (qualifier IS on screen at the moment the words are spoken, C2b, M34, and in the description; script parent-approved)
 4. MINOR-4: "The United States" never named in VO or cards (script as approved; description names the US)
@@ -78,6 +78,15 @@ Whisper hears "unlocked" reproducibly in s06, but fresh Kokoro control syntheses
 
 - **M36:** a Remotion render outputs yuvj420p / full-range even with `--pixel-format=yuv420p`. Verify colour tags on the delivered file with ffprobe (M25); a render whose tags are unverified is UNVERIFIED, not passed. This video is the case that created M36.
 - **M34:** C2b "ABOUT NINETEEN HOURS LATER" at headline size is the passing example of a qualifier carried on the card with the figure. Compare with V1, where the card dropped "ABOUT".
-- **M4:** VO-only is allowed only if silencedetect proves no dead gaps. This VO-only mix still earned MINOR-1 for digital silence in every 0.35s gap plus a 1.3s silent tail. Prefer the bed mix unless the delivered file proves VO-only clean.
+- **M4:** VO-only is allowed only if silencedetect proves no dead gaps. This VO-only mix still earned MINOR-1 for digital silence in every 0.35s gap plus a 1.5s silent tail (45f). Prefer the bed mix unless the delivered file proves VO-only clean.
 - **M26:** attribution roots are counted by occurrence, not by position. The script was checked for repeated attribution before VO, and the red-team STT timestamp check is the gating check.
 - **M25:** red-team re-measures everything from the delivered file. The MAJOR-1 colour defect was caught by independent re-measurement, not by trusting the build report.
+
+
+## Run-code legend (F44)
+
+Shot-plan codes: two-letter set prefix + frame number (VC = Vice City set,
+e.g. Vice_City_11 hero); `w2` = second window of the same still (V2 reuses its
+hero still as a second window, `w14-vc11-w2`, with a different crop — allowed
+only with a different window AND a named reason, see SKILL.md Step 0).
+BLOCKED = the run's content-safety blocklist (M23).
