@@ -14,9 +14,9 @@ Note: the GitHub repo must be named `gta-vi-shorts-editing` so the skill name ma
 
 ## What is this?
 
-This skill is the working method behind the Joker Gaming GTA 6 news Shorts: short, premium, zero-fake English Shorts built from official Rockstar material only. It covers the full path from topic research to a scheduled upload: fact ledger, ChatGPT script and SEO, voiceover, subtitles, stills and motion, cards, mix, render, grade, loudness, builder QC, red-team gate, and scheduling.
+This skill is the working method behind the Joker Gaming GTA 6 news Shorts: short, premium, zero-fake English Shorts built from official Rockstar material only. It is the editorial brain, not a renderer: it teaches the method and the checks that prove a video is ready. Pair it with the Pro Pack Remotion template, or with your own renderer that can hit the same gates. It covers the full path from topic research to a scheduled upload: fact ledger, ChatGPT script and SEO, voiceover, subtitles, stills and motion, cards, mix, render, grade, loudness, builder QC, red-team gate, and scheduling.
 
-It teaches you to edit your own GTA 6 gameplay — not to re-upload someone else's footage, not to auto-cut with one click, and not to chase leak screenshots. Every viewer-facing word traces back to a fact ledger row.
+It teaches you to edit GTA VI news Shorts from official Rockstar trailers and stills — not to re-upload someone else's footage, not to auto-cut with one click, and not to chase leak screenshots. Every viewer-facing word traces back to a fact ledger row. There is no console-capture section in this skill: GTA VI launches Nov 19, 2026, so no buyer has GTA VI gameplay yet; a capture addendum ships post-launch.
 
 ## Who is this for?
 
@@ -32,9 +32,9 @@ Quickstart:
 2. Get the script, SEO, and thumbnail brief from ChatGPT, then hand-count the script to 90-105 words.
 3. Run the M20 pool gate before any voiceover work.
 4. Synthesise Kokoro VO, check it with faster-whisper, cut stills and motion from the measured active picture, and build the mix.
-5. Render in Remotion, apply the grade plus the M36 colour fix plus loudnorm, run builder QC, and pass the red-team gate before scheduling.
+5. Render in Remotion (crf 12), run the fix script (range gate + one loudnorm pass), apply the grade pipeline on the fixed file, run builder QC, and pass the red-team gate before scheduling.
 
-The full method — all 36 rules, verified commands, upload checklist, thumbnail method, and red-team rubric — is in `SKILL.md`.
+The full method — workflow checklist, gates, and the red-team rubric — is in `SKILL.md`; the 36 rules live in `references/m-rules-*.md`, the full step detail in `references/workflow.md`, and the literal install commands in `INSTALL.md`.
 
 ## Proof
 
@@ -42,7 +42,7 @@ Three Shorts were built with this method on November 15, 2026, on the Joker Gami
 
 ### Verified views — channel proof (checked Nov 15, 2026, evening PKT, on the public YouTube pages)
 
-The channel's five most-viewed Shorts, all built with the same editing system:
+The channel's five most-viewed Shorts (checked Nov 15, 2026, on the public YouTube pages):
 
 | Short | Views | Likes | Published |
 |---|---|---|---|
@@ -54,9 +54,11 @@ The channel's five most-viewed Shorts, all built with the same editing system:
 
 Channel total: **10,013 public views across the 37 most recent Shorts** on [@jokergaminglive](https://www.youtube.com/@jokergaminglive) (same check). Watch hours are not public — no watch-hours figure is claimed here. No other view numbers are used in this README.
 
+Note: the five Shorts above were published Nov 10-12, 2026, and predate the Nov 15 trio method documented in this skill. They are channel proof (the channel's real, public numbers), not proof that those five videos used this exact method. The three Shorts below are the ones built with this method.
+
 - GTA VI Built a Whole Cartoon Inside the Game - https://youtube.com/shorts/OC5KczRGYSQ - 40.00s - 96/100 + 60/60 PASS
-- New Zealand Plays GTA VI First. Here's Your Unlock Time - https://youtube.com/shorts/aF6RgIg_mHI - 45.9s - 90/100 + 53/60 PRE-FIX verdict, a FAIL (MAJOR-1 colour). The shipped file is the MAJOR-fixed file, technically re-verified, expected approx 94/100, not a measured re-score
-- Burger Shot Is Real Now. You Can Eat It in Florida - https://youtube.com/shorts/74I0MXC-aIQ - 40.8s - 97/100 + 57/60 PASS, per RUN-NOTES.md only; no standalone red-team report file exists for this video
+- New Zealand Plays GTA VI First. Here's Your Unlock Time - https://youtube.com/shorts/aF6RgIg_mHI - 46.00s - 90/100 + 53/60 PRE-FIX verdict, a FAIL (MAJOR-1 colour). The shipped file is the MAJOR-fixed file, technically re-verified (loudness -15.62 LUFS / -1.87 dBTP, luma shift at or below 0.1, fixed frame viewed identical), expected approx 94/100, not a measured re-score
+- Burger Shot Is Real Now. You Can Eat It in Florida - https://youtube.com/shorts/74I0MXC-aIQ - 40.99s - 97/100 + 57/60 PASS, per RUN-NOTES.md only; no standalone red-team report file exists for this video
 
 Full worked examples with scripts, SEO, shot plans, and scores are in `examples/`.
 
@@ -71,7 +73,7 @@ Full worked examples with scripts, SEO, shot plans, and scores are in `examples/
 | | 3 worked-example project breakdowns with frame-accurate timelines |
 | | Launch-week updates included |
 
-Get the Pro Pack here: https://needcraftco.gumroad.com/l/zqnhg — $49 one-time.
+Get the Pro Pack here: https://needcraftco.gumroad.com/l/gta-vi-shorts-editing-skill — $49 one-time.
 
 ## FAQ
 
@@ -82,7 +84,7 @@ No. This skill is unofficial and independent. It is not affiliated with, endorse
 No. It contains techniques, commands, and checklists only. You supply your own official source material.
 
 **Which platforms does GTA 6 launch on?**
-PlayStation 5 and Xbox Series X|S on November 19, 2026. There is no PC version announced and no PC date — this skill does not claim one, and its capture guidance is console-first.
+PlayStation 5 and Xbox Series X|S on November 19, 2026. There is no PC version announced and no PC date — this skill does not claim one. The method builds Shorts from official Rockstar trailers and stills; it does not teach console capture.
 
 **Will this make my Shorts go viral or earn money?**
 No promise is made about views, earnings, subscribers, or any result. The skill documents a workflow that was used on real videos. Your results depend on your material, your topics, and your execution.
@@ -94,14 +96,46 @@ The skill is written to the Agent Skills standard (`SKILL.md` + frontmatter), so
 
 ```text
 gta-vi-shorts-editing/
-  SKILL.md            The skill: workflow, all 36 rules, commands, rubric, thumbnail method, tools
+  SKILL.md            The skill: workflow, gates, rubric, thumbnail method (M-rules in references/)
+  INSTALL.md          Literal install commands (ffmpeg 8, Node 24, Kokoro models)
+  CHANGELOG.md        What changed per version; what is live vs local
   README.md           This file
   LICENSE             MIT licence
   examples/
     v1-macca-friends.md
     v2-unlock-times.md
     v3-burger-shot.md
+  references/
+    chatgpt-brief.md      The verbatim V1 ChatGPT brief + fill-in template (with CATEGORY line + M32 check)
+    m-rules-*.md          The M1-M36 rules, grouped by domain (6 files)
+    workflow.md           Full step detail for Steps 0-15
+    redteam-rubric.md     Full /60 and /100 area tables + methods
+    post-launch.md        Post-launch beat, card, and tag variant (air date >= Nov 19, 2026)
+    analytics-iteration.md  Retention reading + 48h iteration ritual
+    delivery-spec.md      Delivery spec, ingest checklist, picture lock, version naming
+    voice.md              Channel voice defaults + first-run profile
+    day-plan.md           Launch-window day plan + counted ready assets
+    pitfalls.md           Dated pitfalls
+    sourcing-guide.md     Official sources, what "official" means, bed alternatives
+    appendix-templates.md Fact-ledger, banned-list, POOL-GATE-RECORD schemas
+    pre-render-plan.md    Plan-validate-execute artifact (before any VO)
+    commands.md           Literal commands and code fragments
+    tools.md              Tool versions, paths, gotchas
+    thumbnail-prompts.md  The 7 thumbnail prompts + Joker adaptation + logo rule
+    troubleshooting.md    The five template failure modes, loudnorm, colour tags, FAQ
+  scripts/
+    setup-check.sh        Install / prerequisites check
+    validate-build.py     Word-count gate, banned-list grep, pool arithmetic, overlap check
+  evals/
+    README.md             3 eval cases (prompt + expected output + assertions)
+    evals.json          Measurement suite: should-trigger / should-not-trigger, pass rate, last run
+    grading.json        /60 + /100 rubrics + trio scores
+    timing.json         Render + script timings
 ```
+
+## Version
+
+1.2.0 (2026-11-16). See `CHANGELOG.md` for what changed (live GitHub repo still serves v1.0.0 until a push is confirmed on Saad's word). Proof counts are dated Nov 15, 2026; re-check the live pages for current numbers.
 
 ## License
 
