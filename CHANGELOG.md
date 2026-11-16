@@ -1,13 +1,12 @@
 # CHANGELOG.md — GTA VI Shorts Editing Skill
 
-## 1.2.0 — 2026-11-16 (local only — NOT yet pushed to GitHub, NOT yet on Gumroad)
+## 1.2.0 — 2026-11-16 (live on GitHub + Gumroad since 2026-11-16)
 
-**Live vs local:** the live GitHub repo (`JokerHTML/gta-vi-shorts-editing`) still serves
-v1.0.0 and the live Gumroad page still carries the pre-1.2.0 listing. Both updates need
-Saad's word. Do not link the repo as v1.2.0 until a push is confirmed.
+**Live vs local:** pushed to GitHub 2026-11-16 (Release v1.2.0, tag v1.2.0 on main) and live on Gumroad the same night (listing fixed + v1.2.0 ZIP re-uploaded). The repo may now be linked as v1.2.0.
 
-- Token move: M-rule detail moved to `references/m-rules-*.md` (6 grouped files,
+- Token move: M-rule detail moved to `references/m-rules-*.md` (7 grouped files,
   M-numbers stable, no renumbering); SKILL.md slimmed from 426 lines to ~231 lines.
+- New M39 description-format rule (hook → bullets → caveat → CTA → Sources → exactly 3 hashtags), permanent from Nov 16.
 - Canonical pipeline: fix-then-grade, one loudnorm pass; `post-render-fix.sh` gains a
   signalstats pre-fix range gate; `grade-pipeline.md` takes the fixed file (no range
   conversion, no loudnorm); render command gains `--crf=12`; "lossless master" renamed

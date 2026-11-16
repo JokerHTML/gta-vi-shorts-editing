@@ -135,7 +135,7 @@ gta-vi-shorts-editing/
 
 ## Version
 
-1.2.0 (2026-11-16). See `CHANGELOG.md` for what changed (live GitHub repo still serves v1.0.0 until a push is confirmed on Saad's word). Proof counts are dated Nov 15, 2026; re-check the live pages for current numbers.
+1.2.0 (2026-11-16). See `CHANGELOG.md` for what changed (live on GitHub since 2026-11-16, Release v1.2.0). Proof counts are dated Nov 15, 2026; re-check the live pages for current numbers.
 
 ## License
 
