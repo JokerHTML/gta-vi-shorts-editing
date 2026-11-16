@@ -1,0 +1,25 @@
+{
+  "machine": "build machine (Nov 16 render verification)",
+  "measured": "2026-11-16",
+  "note": "Timings are from generated/placeholder input unless stated otherwise (template render used black clips, silent VO, solid-colour logo block). Re-measure on real footage; do not present these as footage timings.",
+  "render_spec": {
+    "codec": "libx264",
+    "crf_fix_grade": 18,
+    "crf_render": 12,
+    "fps": 30,
+    "loudness_target": "I=-15.5, TP=-2.0, LRA=11, single pass in the fix script",
+    "preset": "slow",
+    "resolution": "1080x1920"
+  },
+  "skill": "gta-vi-shorts-editing",
+  "timings": {
+    "loudnorm_tone_pass": "-15.55 LUFS / -8.43 dBTP, in band",
+    "post_render_fix": "M36 verification passed, exit 0",
+    "setup_check_sh": "passes on the build machine (all tools present)",
+    "template_render_1200f_placeholder": "1200/1200 frames, 40.00s output",
+    "validate_build_py_trio": "V1 103/105 PASS, V2 102/104 PASS, V3 103/105 PASS",
+    "grade_command_v1_2_0_fixed_file": "exit 0; tags yuv420p/tv/bt709x4; loudness -15.51 LUFS / -8.33 dBTP (audio copied, loudnorm preserved)",
+    "range_gate_v1_2_0": "TV-range input YMIN 14/YMAX 230 -> tags only, no conversion; full-range input YMIN 0/YMAX 247 -> pc->tv conversion; both outputs yuv420p/tv/bt709x4"
+  },
+  "version": "1.2.0"
+}
